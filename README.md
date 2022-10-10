@@ -14,7 +14,7 @@ ncftpput out/ED18BQ0U850WT.2022-09-29-08.cc49eb96.log.gz: remote host closed con
 1. `docker build -t=oncrawl .`
 2. `mkdir out` 
 3. put a lot of files in the `out` directory (> 100 files) 
-4. `docker run --rm -it -e FTP_USER=${FTP_USER} -e FTP_PASSWORD=${FTP_PASSWORD} oncrawl`
+4. `docker run --rm -it -e FTP_USER=${FTP_USER} -e FTP_PASSWORD=${FTP_PASSWORD} -v $(pwd)/out:/app/out oncrawl`
 
 
 
